@@ -8,6 +8,7 @@
   ],
   "main": "src/plugin.js",
   "loader": "src/loader.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/SebastianS90/webpack-polyfill-injector"
@@ -17,7 +18,8 @@
   "scripts": {
     "test": "nyc mocha",
     "eslint": "eslint --color --format codeframe .",
-    "coveralls": "nyc mocha && nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc mocha && nyc report --reporter=text-lcov | coveralls",
+    "compile": "tsc"
   },
   "dependencies": {
     "loader-utils": "^1.2.3",
@@ -40,6 +42,7 @@
     "mocha": "^5.1.1",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^13.1.0",
+    "typescript": "^4.0.3",
     "webpack": "^4.29.0"
   }
 }
